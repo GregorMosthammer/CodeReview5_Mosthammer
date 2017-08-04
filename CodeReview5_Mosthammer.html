@@ -1,0 +1,107 @@
+<html>
+    <head>
+            <title>Code Review 5</title>
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <link href="styles.css" rel="stylesheet" type="text/css" media="all">
+
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+       <div class="background">
+	<div class="container">
+  <div class="row one">
+<div class="col-md-4"></div>
+<div class="col-md-3 col-md-offset-1">Available Budget</div>
+<div class="col-md-3 col-md-offset-1"></div>
+  </div>
+
+    <div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-2 col-md-offset-2">a</div>
+
+  </div>
+
+    <div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-2 col-md-offset-3">a</div>
+  </div>
+    
+
+
+
+<div class="row">
+<div class="col-md-4">
+<div class="btn-group">
+   <button class="btn btn-danger">Choose</button>
+   <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">   
+   <span class="caret"></span> 
+   </button>
+ <ul class="dropdown-menu">   
+ <li><a>Income</a></li>   
+<li><a>Expans</a></li> 
+ </ul>
+</div>
+</div>
+<div class="col-md-4">
+<input type="text" id="inputText">
+<input type="number" id="inputNumber">
+</div>
+<div class="col-md-3 col-md-offset-1">
+<button class="inputSubmit" type="button" onclick="tryCatch()">Submit</button>
+<p id="outPut"></p>
+</div>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+function tryCatch() {
+        var inside = document.getElementById("text").value;
+        try{
+        if(inside == "")  throw "empty";
+}
+catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+
+}
+
+$("button").click(function(){
+var name = document.getElementById('inputText').value;
+var price = document.getElementById('inputNumber').value;
+var z = name + price;
+document.getElementById("outPut").innerHTML = z;});
+
+function tryCatch() {
+        var inside = document.getElementById("text").value;
+        try{
+        if(inside == "")  throw "empty";
+}
+catch(err) {
+        message.innerHTML = "Input is " + err;
+    }
+
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+    </body>
+</html>
