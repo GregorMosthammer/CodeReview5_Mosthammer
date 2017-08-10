@@ -1,18 +1,9 @@
-body {
-	font-family: Courier New;
-}
-
 .background {
-	background-image: url("paper.gif");
-	height: 600px;
+	background-image: url("paper.jpg");
+	height: 875px;
 } 
 
 div[class^="col-"], div[class*=" col-"] {
-	 color: red; font-size: 26px; padding: 5px; text-align: center;
+	 color: purple; font-size: 26px; padding: 5px; text-align: center; font-family: Courier New;
 	 }
 
-div[class^="col-md-2 col-md-offset-3"], div[class*="col-md-2 col-md-offset-3"] {
-	background-color: red; color: white;
-}
-div[class^="col-md-2 col-md-offset-2"], div[class*="col-md-2 col-md-offset-2"] {
-	background-color: green; color: white;}

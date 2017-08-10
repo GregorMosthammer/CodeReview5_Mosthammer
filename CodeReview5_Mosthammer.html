@@ -1,37 +1,41 @@
 <html>
     <head>
             <title>Code Review 5</title>
+            <link href="styles.css" rel="stylesheet" type="text/css" media="all">
         <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-   <link href="styles.css" rel="stylesheet" type="text/css" media="all">
 
        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     </head>
     <body>
-       <div class="background">
+       
 	<div class="container">
-  <div class="row one">
-<div class="col-md-4"></div>
-<div class="col-md-3 col-md-offset-1">Available Budget</div>
-<div class="col-md-3 col-md-offset-1"></div>
-  </div>
+  <div class="background">
+<div class="row">
+          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
 
-    <div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-2 col-md-offset-2">a</div>
+          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">Your Money<p id="total" class="text-center"></p></div>
+          <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
+</div>
 
-  </div>
 
-    <div class="row">
-<div class="col-md-2"></div>
-<div class="col-md-2 col-md-offset-3">a</div>
-  </div>
+<div class="row">
+
+
+<div id="income" class="col-md">Income</div>
+</div>
+
+
+<div class="row">
+
+
+<div id="expenses" class="col-md">Expenses</div>
+</div>
     
 
-
+<!-- no function for it 
 
 <div class="row">
 <div class="col-md-4">
@@ -44,64 +48,45 @@
  <li><a>Income</a></li>   
 <li><a>Expans</a></li> 
  </ul>
-</div>
-</div>
-<div class="col-md-4">
-<input type="text" id="inputText">
-<input type="number" id="inputNumber">
-</div>
-<div class="col-md-3 col-md-offset-1">
-<button class="inputSubmit" type="button" onclick="tryCatch()">Submit</button>
-<p id="outPut"></p>
-</div>
-</div>
+-->
+
+
+<form id="budget-form" class="form-inline">
+<div class="row">
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
+
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"><input id="actionInput" placeholder="Put in..." type="text"></div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
 </div>
 
+<div class="row">
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+
+            <input id="valueInput" placeholder="0" type="number">
+
+            <button class="btn btn-default" id="funct-button" type="submit">Submit</button></div>
+<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4"></div>
+</div>
+
+</form>
+<div class="row">
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">Income
+<p id="income-list"></p><button id="button">go to Top</button></div>
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+
+<div class="col-md-3 col-lg-3 col-sm-3 col-xs-3">Expenses
+<p id="expenses-list"></p><button id="button">go to Top</button></div>
+
+<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+
+</div>
 
 
-<script type="text/javascript">
-
-function tryCatch() {
-        var inside = document.getElementById("text").value;
-        try{
-        if(inside == "")  throw "empty";
-}
-catch(err) {
-        message.innerHTML = "Input is " + err;
-    }
-
-}
-
-$("button").click(function(){
-var name = document.getElementById('inputText').value;
-var price = document.getElementById('inputNumber').value;
-var z = name + price;
-document.getElementById("outPut").innerHTML = z;});
-
-function tryCatch() {
-        var inside = document.getElementById("text").value;
-        try{
-        if(inside == "")  throw "empty";
-}
-catch(err) {
-        message.innerHTML = "Input is " + err;
-    }
-
-}
-
-
-
-
-
-
-
-
-</script>
-
-
-
-
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="script.js" type="text/javascript"></script>
+    
     </body>
 </html>
